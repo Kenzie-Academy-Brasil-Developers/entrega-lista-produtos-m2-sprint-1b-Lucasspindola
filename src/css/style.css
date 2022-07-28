@@ -2,6 +2,15 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+
+/* .laticinioDisplay{
+    
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+   
+} */
+
 /* CABEÇALHO */
 
 header {
@@ -130,6 +139,16 @@ border-radius: 50px 0;
 width: 100%;
 }
 
+/* .mudarDisplay{
+    list-style: none;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin-top: 40px;
+width: 90%;
+
+} */
+
 .containerListaProdutos ul {
 list-style: none;
 display: flex;
@@ -203,3 +222,6 @@ justify-content: space-between;
 padding: 5px;
 }
  
+
+
+

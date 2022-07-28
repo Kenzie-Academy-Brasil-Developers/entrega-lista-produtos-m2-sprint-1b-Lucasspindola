@@ -13,6 +13,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <script defer src="./src/js/dataProdutos.js"></script>
+    <script defer src="./src/js/script.js"></script>
     <title>Lista de Produtos</title>
   </head>
   <body>
@@ -24,28 +26,28 @@
     <main>
       <section class="filtersContainer">
         <div id="botoesContainer">
-          <button class="estiloGeralBotoes estiloGeralBotoes--filter">
+          <button class="todosProdutos estiloGeralBotoes estiloGeralBotoes--filter">
             Todos Produtos
           </button>
-          <button class="estiloGeralBotoes estiloGeralBotoes--filter">
+          <button class="hortifruti estiloGeralBotoes estiloGeralBotoes--filter">
             Hortifruti
           </button>
-          <button class="estiloGeralBotoes estiloGeralBotoes--filter">
+          <button class="panificadora estiloGeralBotoes estiloGeralBotoes--filter">
             Panificadora
           </button>
-          <button class="estiloGeralBotoes estiloGeralBotoes--filter">
+          <button class="laticinios estiloGeralBotoes estiloGeralBotoes--filter">
             Laticínios
           </button>
         </div>
 
         <div class="containerBuscaPorNome">
-          <input
+          <input id="pesquisa"
             type="text"
             placeholder="Pesquisar por"
             class="campoBuscaPorNome"
           />
           <button
-            class="estiloGeralBotoes estiloGeralBotoes--botaoBuscaPorNome"
+            class=" pesquisar estiloGeralBotoes estiloGeralBotoes--botaoBuscaPorNome"
           >
             <img src="./src/img/search.png" alt="lupa" />
           </button>
@@ -56,12 +58,12 @@
             <img src="./src/img/alert-circle.png" alt="exclamação de alerta">
             <p>Valor total dos produtos da sessão selecionada</p>
         </div>
-        <span>R$ 0.00</span>
+        <span class="preco">R$ 0.00</span>
       </section>
       <!-- CONTAINER DE PRODUTOS -->
       <section class="containerVitrine">
         <div class="containerListaProdutos">
-         <ul>
+         <ul class="ul">
                     <!-- Utilize esse item html como template para a construção da lista de produtos
                     
                     Você pode remover esses comentários depois que fizer a construção pelo DOM -->
@@ -72,13 +74,13 @@
                         <h3>Maçã</h3>
                         <span>Hortifruti</span>
                         <p>R$ 2.00</p>
-                    </li> -->
-                    
+                    </li>
+                     -->
                 </ul>
         </div>
       </section>
     </main>
-    <script src="src/js/dataProdutos.js"></script>
-    <script src="./scriptDemo.js"></script>
+    <!-- <script src="src/js/dataProdutos.js"></script>
+    <script src="./scriptDemo.js"></script> -->
   </body>
 </html>
