@@ -216,7 +216,9 @@ btnPesquisar.addEventListener('click', function () {
 
     for (let i = 0; i < produtos.length; i++) {
 
-        if (inputPesquisar.value == produtos[i].nome || inputPesquisar.value == produtos[i].nome.toLocaleLowerCase() || inputPesquisar.value == produtos[i].secao || inputPesquisar.value == produtos[i].categoria) {
+        if (inputPesquisar.value == produtos[i].nome || inputPesquisar.value == produtos[i].nome.toLocaleLowerCase() ||
+            inputPesquisar.value == produtos[i].secao || inputPesquisar.value.toLocaleLowerCase() == produtos[i].secao.toLocaleLowerCase() ||
+            inputPesquisar.value == produtos[i].categoria || inputPesquisar.value.toLocaleLowerCase() == produtos[i].categoria.toLocaleLowerCase()) {
 
             arrayPesquisa.push(produtos[i]);
 
