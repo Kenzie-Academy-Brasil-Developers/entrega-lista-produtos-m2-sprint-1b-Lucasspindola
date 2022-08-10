@@ -7,10 +7,6 @@ let arrayProdutosCarrinho = [];
 let valorCarrinho = document.querySelector('.totalValor');
 
 
-
-
-
-
 function renderizarProdutos(objeto, vitrine) {
 
     for (let i = 0; i < objeto.length; i++) {
@@ -25,7 +21,6 @@ function renderizarProdutos(objeto, vitrine) {
 }
 
 renderizarProdutos(produtos, ul);
-
 
 
 let arrayValores
@@ -50,11 +45,7 @@ function criarCard(arrayObjeto) {
     let telaInformacoes = document.querySelector('.informacoesPrecoEQtd');
 
 
-
-
-
-
-    btnComprar.addEventListener('click', (event) => {
+        btnComprar.addEventListener('click', (event) => {
 
         let btnClick = event.target.id;
         const objeto = produtos.find((item) => item.id == btnClick);
@@ -62,8 +53,7 @@ function criarCard(arrayObjeto) {
 
         arrayCarrinho.push(objeto);
 
-        // Soma não está atualizando ao remover
-
+    
         let cont = 0
         valorCarrinho.innerText = `R$${cont},00`
 
@@ -74,21 +64,18 @@ function criarCard(arrayObjeto) {
         valorCarrinho.innerText = `R$${cont},00`
 
 
-
-
         let aux = 0
         for (let i = 0; i < arrayCarrinho.length; i++) {
 
 
 
-            aux += arrayCarrinho[i].preco
-            // valorCarrinho.innerText= arrayCarrinho.reduce((valorAnterior, elementoAtual) => valorAnterior + elementoAtual.value,0)
+            aux += arrayCarrinho[i].preco;
             quantidadeVitrine.innerText = arrayCarrinho.reduce((valorAnterior, elementoAtual) => valorAnterior + elementoAtual.value, 0)
 
 
         }
 
-        addAndRemoveClass(arrayCarrinho)
+        addAndRemoveClass(arrayCarrinho);
 
         renderizarCarrinho(arrayCarrinho, ulCarrinho);
 
@@ -103,6 +90,7 @@ function criarCard(arrayObjeto) {
 
     let olIngredientes = document.createElement('ol');
 
+
     for (let i = 0; i < arrayObjeto.componentes.length; i++) {
         let liIngredientes = document.createElement('li');
 
@@ -110,7 +98,7 @@ function criarCard(arrayObjeto) {
         liIngredientes.innerText = arrayObjeto.componentes[i];
         olIngredientes.append(liIngredientes);
     }
-
+    olIngredientes.classList.add('componentes')
     btnComprar.classList.add('btnComprarCurs')
     imagem.classList.add('imagemLi')
 
@@ -119,7 +107,7 @@ function criarCard(arrayObjeto) {
     category.innerText = arrayObjeto.secao;
     preco.innerText = ` R$${arrayObjeto.preco}`.replace(".", ",")
     btnComprar.innerText = 'comprar'
-    btnDiv.classList.add('btn_Comprar')
+    btnDiv.classList.add('btn_Comprar');
     btnDiv.appendChild(preco);
     btnDiv.appendChild(btnComprar);
 
@@ -129,7 +117,7 @@ function criarCard(arrayObjeto) {
     li.appendChild(category);
     li.append(olIngredientes);
     li.appendChild(btnDiv)
-    // li.appendChild(preco);
+    
 
     return li;
 
